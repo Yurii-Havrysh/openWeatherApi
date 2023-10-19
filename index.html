@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./styleCurrent.css">
+    <link rel="stylesheet" href="./styleForecast.css">
+</head>
+<body>
+    <div class="button_container">
+        <button id="londonBtn" class="buttons">London 5-day forecast</button>
+        <button id="kyivBtn" class="buttons">Kyiv 5-day forecast</button>
+        <button id="newYorkBtn" class="buttons">New York 5-day forecast</button>
+    </div>
+        <div class="container">
+            <div id="header">OpenWeather API</div>
+            <div class="box">
+                <div class="show_horizontal">
+                    <p class="item" style="font-size: 40px;">London</p>
+    
+                    <div class="item" class="infoClass">
+                        <p id="degreeLondon"></p>
+                        <p id="infoLondon"></p>
+                    </div>
+                    <div class="item">
+                        <img id='imgLondon'>
+                    </div>
+                </div>
+                <div class="show_horizontal">
+                    <p class="item" style="font-size: 40px;">Kyiv</p>
+    
+                    <div class="item" class="infoClass">
+                        <p id="degreeKyiv"></p>
+                        <p id="infoKyiv"></p>
+                    </div>
+                    <div class="item">
+                        <img id='imgKyiv'>
+                    </div>
+                    
+                </div>
+                <div class="show_horizontal">
+                    <p class="item" style="font-size: 40px;">New York</p>
+    
+                    <div class="item" class="infoClass">
+                        <p id="degreeNewYork"></p>
+                        <p id="infoNewYork"></p>
+                    </div>
+                    <div class="item">
+                        <img  id='imgNewYork'>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <input type="radio" id="celsius" value="celsius" name="unit" checked/>
+                <label for="celsius">Celsius</label>
+            </div>
+            <div>
+                <input type="radio" id="fahrenheit" value="fahrenheit" name="unit"/>
+                <label for="fahrenheit">Fahrenheit</label>
+            </div>
+        </div>
+
+        <div id="tablesDiv">
+            <table id="tableLondon">
+                <tr>
+                    <th id="firstDayL"></th>
+                    <th id="secondDayL"></th>
+                    <th id="thirdDayL"></th>
+                    <th id="fourthDayL"></th>
+                    <th id="fifthDayL"></th>
+                </tr>
+                <tr>
+                    <td id="firstDayInfoL"></td>
+                    <td id="secondDayInfoL"></td>
+                    <td id="thirdDayInfoL"></td>
+                    <td id="fourthDayInfoL"></td>
+                    <td id="fifthDayInfoL"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="items" id="firstDayImgL"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="secondDayImgL"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="thirdDayImgL"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fourthDayImgL"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fifthDayImgL"></img>
+                    </td>
+                </tr>
+            </table>
+            <table id="tableKyiv">
+                <tr>
+                    <th id="firstDayK"></th>
+                    <th id="secondDayK"></th>
+                    <th id="thirdDayK"></th>
+                    <th id="fourthDayK"></th>
+                    <th id="fifthDayK"></th>
+                </tr>
+                <tr>
+                    <td id="firstDayInfoK"></td>
+                    <td id="secondDayInfoK"></td>
+                    <td id="thirdDayInfoK"></td>
+                    <td id="fourthDayInfoK"></td>
+                    <td id="fifthDayInfoK"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="items" id="firstDayImgK"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="secondDayImgK"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="thirdDayImgK"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fourthDayImgK"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fifthDayImgK"></img>
+                    </td>
+                </tr>
+            </table>
+            <table id="tableNewYork">
+                <tr>
+                    <th id="firstDayN"></th>
+                    <th id="secondDayN"></th>
+                    <th id="thirdDayN"></th>
+                    <th id="fourthDayN"></th>
+                    <th id="fifthDayN"></th>
+                </tr>
+                <tr>
+                    <td id="firstDayInfoN"></td>
+                    <td id="secondDayInfoN"></td>
+                    <td id="thirdDayInfoN"></td>
+                    <td id="fourthDayInfoN"></td>
+                    <td id="fifthDayInfoN"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="items" id="firstDayImgN"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="secondDayImgN"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="thirdDayImgN"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fourthDayImgN"></img>
+                    </td>
+                    <td>
+                        <img class="items" id="fifthDayImgN"></img>
+                    </td>
+                
+                </tr>
+            </table>
+        </div>
+        
+        
+        
+    <script src="./current.js"></script>
+    <script src="./5daysLondon.js"></script>
+    <script src="./5daysKyiv.js"></script>
+    <script src="./5daysNewYork.js"></script>
+</body>
+</html>
